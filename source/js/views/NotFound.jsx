@@ -2,14 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
-// This component is used for Server rendering
-// When you want to return 40x http statuses
 const RouteStatus = ({ code, children }) => (
   <Route
     render={
       ({ staticContext }) => {
         if (staticContext) {
-          staticContext.status = code; // eslint-disable-line no-param-reassign
+          staticContext.status = code;
         }
 
         return children;

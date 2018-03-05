@@ -105,10 +105,4 @@ const fetchResource = (path, userOptions = {}) => {
     });
 };
 
-function getPeople() {
-  return fetchResource('people/');
-}
-
-export default {
-  getPeople,
-};
+export default {};
