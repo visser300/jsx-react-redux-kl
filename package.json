@@ -64,11 +64,13 @@
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
+    "chart.js": "^1.1.1",
     "express": "^4.16.2",
     "immutable": "^3.8.2",
     "isomorphic-fetch": "^2.2.1",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
+    "react-chartjs": "^1.2.0",
     "react-dom": "^16.2.0",
     "react-grid-layout": "^0.16.5",
     "react-hot-loader": "^4.0.0-beta.12",
