@@ -246,12 +246,27 @@ hr {
 
 .user-info > h1 {
   text-align: center;
-  font-size: 18px;
+  font-size: 0.8em;
   margin-top: 10px;
 }
 
 .user-info > h5 {
   text-align: center;
-  font-size: 10px;
-  margin-top: -15%;
+  font-size: 0.5em;
+  margin-top: -18px;
+}
+
+.carbox {
+  overflow: hidden;
+}
+
+.carbox .header {
+  font-size: 1em;
+}
+
+.carbox .footer {
+  float: right;
+  padding-right: 5px;
+  font-size: 0.7em;
+  margin-top: -1%;
 }

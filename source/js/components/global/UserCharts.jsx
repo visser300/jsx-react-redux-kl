@@ -6,6 +6,7 @@ export default class UserCharts extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      type: "1",
       data: {
         line: ChartData.LineData,
         bar: ChartData.BarData,
@@ -13,9 +14,10 @@ export default class UserCharts extends Component {
       }
     }
   }
+  handleChange(event) {
+    this.setState({type: event.target.value});
+  }
   renderLineChartUsers() {
-    console.log(this.state.data.line);
-    console.log(ChartData.LineDataOptions);
     return <Line data={this.state.data.line} options={ChartData.LineDataOptions}/>;
   }
   renderBarChartUsers() {
@@ -25,12 +27,29 @@ export default class UserCharts extends Component {
     return <Pie data={this.state.data.pie} options={ChartData.PieDataOptions}/>;
   }
   render() {
-    if (this.props.type == "1") {
-      return this.renderLineChartUsers();
-    } else if (this.props.type == "2") {
-      return this.renderBarChartUsers();
+    let chart;
+    if (this.state.type == "1") {
+      chart = this.renderLineChartUsers();
+    } else if (this.state.type == "2") {
+      chart = this.renderBarChartUsers();
     } else {
-      return this.renderPieChartUsers();
+      chart = this.renderPieChartUsers();
     }
+
+    return (
+      <div>
+        <div className="header">{this.props.title}</div>
+        <div className="body">
+          {chart}
+        </div>
+        <div className="footer">
+          <select onChange={this.handleChange.bind(this)}>
+            <option value="1">Line Chart</option>
+            <option value="2">Bar Chart</option>
+            <option value="3">Pie Chart</option>
+          </select>
+        </div>
+      </div>
+    );
   }
 }

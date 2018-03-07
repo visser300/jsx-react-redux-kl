@@ -30,25 +30,25 @@ export default class Home extends Component {
     return (
       <ReactGridLayout className="layout" layout={layout} cols={14} rowHeight={30} width={1200}>
         <div className='carbox' key="a1">
-          <UserCharts type="1" />
+          <UserCharts type="1" title="Chart" />
         </div>
         <div className='carbox' key="a2">
-          <UserCharts type="2" />
+          <UserCharts type="2" title="Chart" />
         </div>
         <div className='carbox' key="a3">
-          <UserCharts type="3" />
+          <UserCharts type="3" title="Chart" />
         </div>
         <div className='carbox' key="a4">
           <UserCounter />
         </div>
         <div className='carbox' key="b1">
-          <UserCharts type="2" />
+          <UserCharts type="3" title="Chart" />
         </div>
         <div className='carbox' key="b2">
-          <UserCharts type="1" />
+          <UserCharts type="1" title="Chart" />
         </div>
         <div className='carbox' key="b3">
-          <UserCharts type="3" />
+          <UserCharts type="2" title="Chart" />
         </div>
         <div className='carbox' key="b4">
           <UserCounter />

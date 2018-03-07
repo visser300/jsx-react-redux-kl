@@ -7,6 +7,20 @@ export default class UserCounter extends Component {
       users: 10
     }
   }
+  timer() {
+    this.setState({
+      users: this.state.users + 1
+    })
+    if(this.state.users > 99) { 
+      clearInterval(this.intervalId);
+    }
+  }
+  componentDidMount() {
+    this.intervalId = setInterval(this.timer.bind(this), 500);
+  }
+  componentWillUnmount(){
+    clearInterval(this.intervalId);
+  }
   render() {
     return (
       <span className="user-info">

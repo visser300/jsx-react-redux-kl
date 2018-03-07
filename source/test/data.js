@@ -76,7 +76,7 @@ const ChartData = {
         offsetGridLines : false,
 
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: true
     },
 
     BarData: {
@@ -136,7 +136,7 @@ const ChartData = {
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
 
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: true
     },
 
     PieData: {
@@ -198,7 +198,7 @@ const ChartData = {
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>",
 
         responsive: true,
-        maintainAspectRatio: false
+        maintainAspectRatio: true
     }
 }
 
