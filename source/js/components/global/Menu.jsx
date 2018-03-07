@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 import { routeCodes } from 'constants/routes';
-import workAndCoLogoImg from 'img/workco-logo.svg';
 
 export default class Menu extends Component {
   render() {
@@ -15,13 +14,6 @@ export default class Menu extends Component {
             to={ routeCodes.HOME }
           >
             Home
-          </NavLink>
-          <NavLink
-            activeClassName='Menu-link--active'
-            className='Menu-link'
-            to='/404'
-          >
-            404
           </NavLink>
         </div>
       </div>

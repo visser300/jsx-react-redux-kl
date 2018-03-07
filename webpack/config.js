@@ -83,29 +83,6 @@ const rules = [
     exclude: /node_modules/,
     use: ['babel-loader'],
   },
-  // SVG are imported as react components
-  {
-    test: /\.svg$/,
-    use: [
-      {
-        loader: 'babel-loader',
-      },
-      {
-        loader: 'react-svg-loader',
-        options: {
-          svgo: {
-            plugins: [
-              {
-                removeTitle: true,
-              },
-            ],
-            floatPrecision: 3,
-          },
-        },
-      },
-    ],
-    include: paths.svg,
-  },
   // Images
   {
     test: /\.(png|gif|jpg|svg)$/,

@@ -73,7 +73,10 @@ const ChartData = {
         legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].strokeColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
         
         //Boolean - Whether to horizontally center the label and point dot inside the grid
-        offsetGridLines : false
+        offsetGridLines : false,
+
+        responsive: true,
+        maintainAspectRatio: false
     },
 
     BarData: {
@@ -130,29 +133,41 @@ const ChartData = {
         barDatasetSpacing : 1,
 
         //String - A legend template
-        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>"
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<datasets.length; i++){%><li><span style=\"background-color:<%=datasets[i].fillColor%>\"><%if(datasets[i].label){%><%=datasets[i].label%><%}%></span></li><%}%></ul>",
+
+        responsive: true,
+        maintainAspectRatio: false
     },
 
-    PieData: [
-        {
-            value: 300,
-            color:"#F7464A",
-            highlight: "#FF5A5E",
-            label: "Red"
-        },
-        {
-            value: 50,
-            color: "#46BFBD",
-            highlight: "#5AD3D1",
-            label: "Green"
-        },
-        {
-            value: 100,
-            color: "#FDB45C",
-            highlight: "#FFC870",
-            label: "Yellow"
-        }
-    ],
+    PieData: {
+        labels: [
+            'ONE',
+            'TWO',
+            'THREE',
+            'FOUR',
+            'FIVE',
+            'SIX',
+            'SEVEN',
+            'EIGHT',
+            'NINE',
+            'TEN'
+        ],
+        datasets: [{
+            backgroundColor: [
+                '#FF3784',
+                '#36A2EB',
+                '#4BC0C0',
+                '#F77825',
+                '#9966FF',
+                '#00A8C6',
+                '#379F7A',
+                '#CC2738',
+                '#8B628A',
+                '#8FBE00'
+            ],
+            data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        }]
+    },
 
     PieDataOptions: {
         //Boolean - Whether we should show a stroke on each segment
@@ -180,7 +195,10 @@ const ChartData = {
         animateScale : false,
 
         //String - A legend template
-        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>"
+        legendTemplate : "<ul class=\"<%=name.toLowerCase()%>-legend\"><% for (var i=0; i<segments.length; i++){%><li><span style=\"background-color:<%=segments[i].fillColor%>\"><%if(segments[i].label){%><%=segments[i].label%><%}%></span></li><%}%></ul>",
+
+        responsive: true,
+        maintainAspectRatio: false
     }
 }
 
