@@ -4,22 +4,22 @@ const ChartData = {
         datasets: [
             {
                 label: "My First dataset",
-                fillColor: "rgba(220,220,220,0.2)",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
+                fillColor: "#FF3784",
+                strokeColor: "#FF3784",
+                pointColor: "#FF3784",
                 pointStrokeColor: "#fff",
                 pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
+                pointHighlightStroke: "#FF3784",
                 data: [65, 59, 80, 81, 56, 55, 40]
             },
             {
                 label: "My Second dataset",
-                fillColor: "rgba(151,187,205,0.2)",
-                strokeColor: "rgba(151,187,205,1)",
-                pointColor: "rgba(151,187,205,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(151,187,205,1)",
+                fillColor: "#FF9984",
+                strokeColor: "#FF3784",
+                pointColor: "#FF3784",
+                pointStrokeColor: "#FF3784",
+                pointHighlightFill: "#FF3784",
+                pointHighlightStroke: "#FF3784",
                 data: [28, 48, 40, 19, 86, 27, 90]
             }
         ]
@@ -166,6 +166,22 @@ const ChartData = {
                 '#8FBE00'
             ],
             data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        }]
+    },
+
+    PieData2: {
+        labels: [
+            'ONE',
+            'TWO',
+            'THREE'
+        ],
+        datasets: [{
+            backgroundColor: [
+                '#FF3784',
+                '#36A2EB',
+                '#4BC0C0'
+            ],
+            data: [1, 2, 3]
         }]
     },
 

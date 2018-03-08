@@ -246,14 +246,16 @@ hr {
 
 .user-info > h1 {
   text-align: center;
-  font-size: 0.8em;
+  font-size: 0.6em;
   margin-top: 10px;
+  font-weight: 400;
 }
 
 .user-info > h5 {
   text-align: center;
-  font-size: 0.5em;
-  margin-top: -18px;
+  font-size: 0.7em;
+  margin-top: -14px;
+  font-weight: 600;
 }
 
 .carbox {
@@ -262,11 +264,12 @@ hr {
 
 .carbox .header {
   font-size: 1em;
+  text-align: center;
 }
 
 .carbox .footer {
   float: right;
   padding-right: 5px;
-  font-size: 0.7em;
+  font-size: 0.5em;
   margin-top: -1%;
 }

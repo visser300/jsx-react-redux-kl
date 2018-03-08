@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-export default class UserCounter extends Component {
+export default class UserRevenue extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -24,8 +24,8 @@ export default class UserCounter extends Component {
   render() {
     return (
       <span className="user-info">
-        <h1>Users</h1>
-        <h5>{this.state.users}</h5>
+        <h1>Revenue</h1>
+        <h5>{Math.round(this.state.users * 0.1)}M</h5>
       </span>
     );
   }
