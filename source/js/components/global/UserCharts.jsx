@@ -1,48 +1,48 @@
 import React, { Component } from 'react';
-import {Line, Bar, Pie} from 'react-chartjs-2';
+import ReactHighcharts from 'react-highcharts';
 import ChartData from '../../../test/data.js';
 
 export default class UserCharts extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      data: {
-        line: ChartData.LineData,
-        bar: ChartData.BarData,
-        pie1: ChartData.PieData,
-        pie2: ChartData.PieData2,
-      }
+      type: props.type
     }
   }
-  renderLineChartUsers() {
-    return <Line data={this.state.data.line} options={ChartData.LineDataOptions}/>;
+  handleChange(event) {
+    this.setState({type: event.target.value});
   }
-  renderBarChartUsers() {
-    return <Bar data={this.state.data.bar} options={ChartData.BarDataOptions}/>;
-  }
-  renderLongPieChartUsers() {
-    return <Pie data={this.state.data.pie1} options={ChartData.PieDataOptions}/>;
-  }
-  renderShortPieChartUsers() {
-    return <Pie data={this.state.data.pie2} options={ChartData.PieDataOptions}/>;
+  onResize(layout, layouts) {
+    console.log(123);
+    this.setState(this.state);
   }
   render() {
-    let chart;
-    if (this.props.type == "1") {
-      chart = this.renderLineChartUsers();
-    } else if (this.props.type == "2") {
-      chart = this.renderBarChartUsers();
-    } else if (this.props.type == "3") {
-      chart = this.renderLongPieChartUsers();
-    } else if (this.props.type == "4") {
-      chart = this.renderShortPieChartUsers();
+    let config;
+
+    if (this.state.type == "line") {
+      config = ChartData.LineData;
+    } else if (this.state.type == "bar") {
+      config = ChartData.BarData;
+    } else if (this.state.type == "pie") {
+      config = ChartData.PieData;
+    } else if (this.state.type == "web") {
+      config = ChartData.WebData;
     }
+
+    config.title.text = this.props.title;
 
     return (
       <div>
-        <div className="header">{this.props.title}</div>
         <div className="body">
-          {chart}
+          <ReactHighcharts config={config}> </ReactHighcharts>
+        </div>
+        <div className="footer">
+          <select onChange={this.handleChange.bind(this)}>
+            <option value="line">Line</option>
+            <option value="bar">Bar</option>
+            <option value="pie">Pie</option>
+            <option value="web">Web</option>
+          </select>
         </div>
       </div>
     );
