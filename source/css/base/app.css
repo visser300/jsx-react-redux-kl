@@ -244,17 +244,19 @@ hr {
   box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
 }
 
-.user-info > h1 {
+.react-grid-item {
+  font-size: 15px;
+}
+
+.user-info > .title {
   text-align: center;
-  font-size: 0.6em;
-  margin-top: 10px;
+  margin-top: 30%;
   font-weight: 400;
 }
 
-.user-info > h5 {
+.user-info > .body {
   text-align: center;
-  font-size: 0.7em;
-  margin-top: -14px;
+  margin-bottom: 35%;
   font-weight: 600;
 }
 
@@ -267,11 +269,10 @@ hr {
   text-align: center;
 }
 
-.carbox .footer {
-  float: right;
-  padding-right: 5px;
-  font-size: 0.5em;
-  margin-top: -1%;
+.carbox .footer > select {
+  margin-top: -35px;
+  position: absolute;
+  height: 35px;
 }
 
 .primary-color    { color: #0098eb; fill: #0098eb }
@@ -376,4 +377,15 @@ hr {
   .segment-dropdown .md-button {
       margin: 0;
       padding: 0;
+  }
+  
+  .highcharts-container {
+    width:100% !important;
+    height:100% !important;
+  }
+
+  @media (min-width: 1025px) {
+    .Page {
+      margin: 0 0 0 10rem;
+    }
   }

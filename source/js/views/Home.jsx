@@ -31,14 +31,14 @@ export default class Home extends Component {
     this.layout = this.storage.read('layout')
     if (!this.layout) {
       this.layout = [
-        {i: 'a1', x: 0, y: 0, w: 3, h: 6, minW: 3, maxW: 10, minH: 4, maxH: 12},
-        {i: 'a2', x: 3, y: 0, w: 3, h: 6, minW: 3, maxW: 10, minH: 4, maxH: 12},
+        {i: 'a1', x: 0, y: 0, w: 4, h: 10, minW: 4, maxW: 10, minH: 4, maxH: 16},
+        {i: 'a2', x: 3, y: 0, w: 4, h: 10, minW: 4, maxW: 10, minH: 4, maxH: 16},
         {i: 'a4', x: 6, y: 0, w: 1, h: 2, minW: 1, maxW: 6, minH: 2, maxH: 6},
-        {i: 'b1', x: 0, y: 4, w: 3, h: 6, minW: 3, maxW: 10, minH: 4, maxH: 12},
-        {i: 'b2', x: 3, y: 4, w: 3, h: 6, minW: 3, maxW: 10, minH: 4, maxH: 12},
+        {i: 'b1', x: 0, y: 4, w: 4, h: 10, minW: 3, maxW: 10, minH: 4, maxH: 16},
+        {i: 'b2', x: 3, y: 4, w: 4, h: 10, minW: 3, maxW: 10, minH: 4, maxH: 16},
         {i: 'b4', x: 6, y: 2, w: 1, h: 2, minW: 1, maxW: 6, minH: 2, maxH: 6},
         {i: 'c4', x: 6, y: 4, w: 1, h: 2, minW: 1, maxW: 6, minH: 2, maxH: 6},
-        {i: 'd4', x: 6, y: 6, w: 2, h: 4, minW: 2, maxW: 10, minH: 2, maxH: 6},
+        {i: 'd4', x: 6, y: 6, w: 3, h: 6, minW: 2, maxW: 10, minH: 2, maxH: 6},
       ];
     }
   }
@@ -49,7 +49,7 @@ export default class Home extends Component {
   render() {
 
     return (
-      <ReactGridLayout className="layout" onLayoutChange={this.onLayoutChange.bind(this)} layout={this.layout} cols={10} rowHeight={30} width={1200}>
+      <ReactGridLayout className="layout" onLayoutChange={this.onLayoutChange.bind(this)} layout={this.layout} cols={12} rowHeight={30} width={1200}>
         <div className='carbox' key="a1">
           <UserCharts type="line" title="Campaigns" />
         </div>

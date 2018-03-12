@@ -4,13 +4,20 @@ export default class UserImpression extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      users: 10
+      users: 10,
+      titleFontStyle: { 'fontSize': '16px'},
+      bodyFontStyle: {  'fontSize': '12px' },
     }
   }
   timer() {
+    var width = this.myDiv.offsetWidth;
+
     this.setState({
-      users: this.state.users + 1
+      users: this.state.users + 1,
+      titleFontStyle: { 'fontSize': (width / 10) + 'px'},
+      bodyFontStyle: {  'fontSize': ((width - 4) / 10) + 'px' },
     })
+    
     if(this.state.users > 99) { 
       clearInterval(this.intervalId);
     }
@@ -23,10 +30,10 @@ export default class UserImpression extends Component {
   }
   render() {
     return (
-      <span className="user-info">
-        <h1>Impressions</h1>
-        <h5>{this.state.users}K</h5>
-      </span>
+      <div ref={input => {this.myDiv = input}} className="user-info">
+        <div className="title" style={this.state.titleFontStyle}>Impressions</div>
+        <div className="body" style={this.state.bodyFontStyle}>{this.state.users}K</div>
+      </div>
     );
   }
 }
